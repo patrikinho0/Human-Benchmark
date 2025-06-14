@@ -1,0 +1,51 @@
+  .game {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .game-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+  }
+  
+  .game-box.ready {
+    background-color: #333333;
+    color: #ccc;
+  }
+  
+  .game-box.waiting {
+    background-color: #ffa726;
+    color: #222;
+  }
+  
+  .game-box.now {
+    background-color: #66bb6a;
+    color: white;
+  }
+  
+  .game-box.result {
+    background-color: #42a5f5;
+    color: white;
+  }
+  
+  .reaction-time {
+    position: absolute;
+    bottom: 30px;
+    font-size: 1.2rem;
+    color: #aaa;
+  }
+  

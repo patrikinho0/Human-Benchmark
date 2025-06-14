@@ -1,0 +1,124 @@
+.mobile-sidebar-toggle-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    z-index: 40;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.sidebar-toggle-button {
+    background: none;
+    border: none;
+    color: #ffa726;
+    font-size: 1.8rem;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.sidebar-toggle-button:hover {
+    color: #ffcc80;
+}
+
+.sidebar-main-container {
+    width: 250px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+}
+
+.sidebar-main-container.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #66bb6a;
+    margin: 0;
+}
+
+.sidebar-navigation {
+    flex-grow: 1;
+    padding: 1rem 0;
+}
+
+.sidebar-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-list-item {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    margin: 0 0.75rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav-link:hover {
+    background-color: #333333;
+    color: #ffa726;
+}
+
+.sidebar-link-icon {
+    margin-right: 0.75rem;
+    color: #42a5f5;
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid #333333;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999999;
+}
+
+@media (min-width: 768px) {
+    .mobile-sidebar-toggle-container {
+        display: none;
+    }
+
+    .sidebar-main-container {
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        min-height: 100vh;
+        box-shadow: none;
+    }
+}
